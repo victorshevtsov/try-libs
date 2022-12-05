@@ -1,12 +1,14 @@
+import Arweave from "arweave";
 import { DID } from "dids";
 import { OptionsB } from "./optionsB";
 
 export class ClassB {
   private _name: string;
   private _valueB: string;
+  private _arweave: Arweave;
   private _did: DID;
 
-  constructor(options?: OptionsB) {
+  constructor(arweave: Arweave, options?: OptionsB) {
     this._name = options
       ? options.name
       : "empty";
@@ -15,6 +17,7 @@ export class ClassB {
       ? options.valueB
       : "empty";
 
+    this._arweave = arweave;
     this._did = new DID();
   }
 
@@ -24,6 +27,10 @@ export class ClassB {
 
   public get valueB() {
     return this._valueB;
+  }
+
+  public get arweave() {
+    return this._arweave;
   }
 
   public get did() {

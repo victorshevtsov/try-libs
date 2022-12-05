@@ -1,10 +1,13 @@
 import { ClassA } from "@libs/lib-a";
 import { ClassB } from "@libs/lib-b";
+import Arweave from "arweave";
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
+const arweave = new Arweave({});
+
 const objectA = new ClassA({ name: "name A", valueA: "value A" });
-const objectB = new ClassB({ name: "name B", valueB: "value B" });
+const objectB = new ClassB(arweave, { name: "name B", valueB: "value B" });
 
 export default function Home() {
 
@@ -27,6 +30,7 @@ export default function Home() {
           {JSON.stringify({
             name: objectB.name,
             valueB: objectB.valueB,
+            arweaveConfig: objectB.arweave.getConfig(),
             didB: objectB.did
           }, null, 2)}
         </pre>

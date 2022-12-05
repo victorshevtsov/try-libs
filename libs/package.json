@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "arweave": "^1.11.8",
     "dids": "^3.4.0",
     "tslib": "^2.3.0"
   },
