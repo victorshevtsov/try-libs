@@ -5,6 +5,7 @@
   "scripts": {},
   "private": true,
   "dependencies": {
+    "dids": "^3.4.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

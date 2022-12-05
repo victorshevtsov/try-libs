@@ -11,5 +11,6 @@ console.log({
 
 console.log({
   name: objectB.name,
-  valueB: objectB.valueB
+  valueB: objectB.valueB,
+  did: objectB.did
 })

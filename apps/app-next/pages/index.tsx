@@ -26,7 +26,8 @@ export default function Home() {
         <pre>
           {JSON.stringify({
             name: objectB.name,
-            valueA: objectB.valueB,
+            valueB: objectB.valueB,
+            didB: objectB.did
           }, null, 2)}
         </pre>
       </main>
